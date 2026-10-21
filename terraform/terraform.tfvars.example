@@ -1,0 +1,9 @@
+# Example Terraform Variables
+# Copy to terraform.tfvars and fill in your AWS details
+
+aws_region          = "us-east-1"
+environment         = "prod"
+ecr_repository_name = "secureid"
+instance_type       = "t3.small"
+key_name            = "secureid-devsecops-key"
+allowed_ssh_cidr    = "203.0.113.50/32" # Replace with your public IP address

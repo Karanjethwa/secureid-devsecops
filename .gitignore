@@ -1,0 +1,73 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build outputs
+dist/
+build/
+backend/dist/
+frontend/dist/
+
+# Environment files and credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.id_rsa
+*.id_ed25519
+
+# SQLite database files and persistent data
+data/*.sqlite
+data/*.sqlite-journal
+backend/data/*.sqlite
+backend/data/*.sqlite-journal
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# SonarQube & Trivy local caches
+.scannerwork/
+.sonar/
+.trivy/
+
+# Terraform local state and files
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.tfvars
+!terraform/terraform.tfvars.example
+
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Local database and scan reports
+data/
+trivy-report*.json
+

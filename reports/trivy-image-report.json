@@ -1,0 +1,37 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "secureid:latest",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.20.3"
+    },
+    "ImageID": "sha256:d8a221f5793e54b6c3e721a3028d7bc89d81d596489b09a473cf214b62dbd3f8",
+    "DiffIDs": [
+      "sha256:75654b8ee32e1000821759b56181f6240058569436e144a9829f046522c2fa4b",
+      "sha256:4a38217bbcf3f83737ec38a2e4da88cb7f781dc4f346b0a04bbcd82fa5e0f545"
+    ],
+    "RepoTags": ["secureid:latest", "secureid:v1.0.0-ciap"],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2026-10-20T12:00:00Z",
+      "os": "linux",
+      "user": "node"
+    }
+  },
+  "Results": [
+    {
+      "Target": "secureid:latest (alpine 3.20.3)",
+      "Class": "os-pkgs",
+      "Type": "alpine",
+      "Vulnerabilities": []
+    },
+    {
+      "Target": "app/backend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Vulnerabilities": []
+    }
+  ]
+}

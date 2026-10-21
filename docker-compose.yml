@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  secureid-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: secureid:latest
+    container_name: secureid-microproject
+    restart: unless-stopped
+    ports:
+      - '3000:5000'
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+      - DATABASE_PATH=/app/backend/data/secureid.sqlite
+    volumes:
+      - ./data:/app/backend/data
+    healthcheck:
+      test: ['CMD', 'curl', '-fsS', 'http://localhost:5000/api/health']
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+    security_opt:
+      - no-new-privileges:true

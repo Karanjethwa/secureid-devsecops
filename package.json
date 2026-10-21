@@ -1,0 +1,35 @@
+{
+  "name": "secureid-identity-system",
+  "version": "1.0.0",
+  "description": "SecureID — Secure Digital Identity Management System (DevSecOps CIAP Microproject)",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "node scripts/dev.js",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "cd backend && npm start",
+    "test": "cd backend && npm test",
+    "test:coverage": "cd backend && npx vitest run --coverage",
+    "docker:build": "docker build -t secureid:latest .",
+    "docker:run": "docker run -d --name secureid-app -p 3000:5000 --env-file .env secureid:latest",
+    "trivy:scan": "node scripts/trivy-scan.js"
+  },
+  "keywords": [
+    "devsecops",
+    "ciap-microproject",
+    "digital-identity",
+    "rbac",
+    "cybersecurity",
+    "sdg-9",
+    "sonarqube",
+    "trivy",
+    "jenkins",
+    "terraform"
+  ],
+  "author": "DevSecOps Lab Student Team",
+  "license": "MIT"
+}
